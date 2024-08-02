@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/faviconV2.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a76e832906.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Course Survey</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Header styling */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+
+        /* Form styling */
+        form.survey-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        textarea,
+        input[type="radio"] {
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            resize: vertical;
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 10px;
+            margin-right: 20px;
+            color: #555;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            form.survey-form {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="learning.html">Learning</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="sign-up.html">Sign Up</a></li>
+                <li><a href="login.html">Log In</a></li>
+            </ul>
+        </div>
+        <h1>Course Survey</h1>
+    </header>
+    <form class="survey-form" action="./backend/submit_survey.php" method="post">
+        <!-- Rating Questions -->
+        <div class="form-group">
+            <h3>1. How would you rate the overall content of the course?</h3>
+            <label><input type="radio" name="q1" value="1"> 1</label>
+            <label><input type="radio" name="q1" value="2"> 2</label>
+            <label><input type="radio" name="q1" value="3"> 3</label>
+            <label><input type="radio" name="q1" value="4"> 4</label>
+            <label><input type="radio" name="q1" value="5"> 5</label>
+        </div>
+
+        <div class="form-group">
+            <h3>2. How would you rate the instructor's teaching effectiveness?</h3>
+            <label><input type="radio" name="q2" value="1"> 1</label>
+            <label><input type="radio" name="q2" value="2"> 2</label>
+            <label><input type="radio" name="q2" value="3"> 3</label>
+            <label><input type="radio" name="q2" value="4"> 4</label>
+            <label><input type="radio" name="q2" value="5"> 5</label>
+        </div>
+
+        <!-- Lesson Learned -->
+        <div class="form-group">
+            <h3>3. What did you learn from this course?</h3>
+            <textarea name="q3" rows="4" cols="50"></textarea>
+        </div>
+
+        <!-- Ways to Improve -->
+        <div class="form-group">
+            <h3>4. How can we improve this course?</h3>
+            <textarea name="q4" rows="4" cols="50"></textarea>
+        </div>
+
+        <!-- Overall Satisfaction -->
+        <div class="form-group">
+            <h3>5. Overall, how satisfied are you with the course?</h3>
+            <label><input type="radio" name="q5" value="Very Satisfied"> Very Satisfied</label>
+            <label><input type="radio" name="q5" value="Satisfied"> Satisfied</label>
+            <label><input type="radio" name="q5" value="Neutral"> Neutral</label>
+            <label><input type="radio" name="q5" value="Dissatisfied"> Dissatisfied</label>
+            <label><input type="radio" name="q5" value="Very Dissatisfied"> Very Dissatisfied</label>
+        </div>
+
+        <button type="submit">Submit Survey</button>
+    </form>
+</body>
+
+</html>

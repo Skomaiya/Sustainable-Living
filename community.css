@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&family=Yeseva+One&display=swap");
+
+:root {
+    --primary-color: #2E8B57;
+    --secondary-color: #159eec;
+    --tertiary-color: #1e5d3b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f4f9;
+    min-height: 100vh;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-menu a:hover {
+    color: var(--secondary-color);
+}
+
+/* Forum Styles */
+.forum-container {
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+.forum-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.forum-header h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.forum-header p {
+    color: var(--tertiary-color);
+    font-size: 1rem;
+}
+
+.chat-box {
+    max-height: 500px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+/* Message Styles */
+.message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f4f4f9;
+    border-radius: 5px;
+    position: relative;
+    justify-content: space-between;
+}
+
+.user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.message-text {
+    flex: 1;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.timestamp {
+    display: block;
+    margin-left: 10px;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.edit-button, .delete-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.edit-button:hover, .delete-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.chat-input {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.chat-input textarea {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+}
+
+.chat-input button {
+    padding: 10px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: var(--secondary-color);
+}

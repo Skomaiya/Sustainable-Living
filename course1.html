@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/faviconV2.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a76e832906.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Introduction to Sustainability</title>
+    <link rel="stylesheet" href="course.css">
+    <style>
+        .pdf-container {
+            max-width: 800px;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .pdf-container iframe {
+            width: 100%;
+            height: 800px;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .pdf-container iframe {
+                height: 600px;
+            }
+        }
+
+        .survey-button {
+            display: block;
+            width: fit-content;
+            padding: 10px 20px;
+            margin: 20px auto;
+            background-color: #2E8B57;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        .survey-button:hover {
+            background-color: #007BFF;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="learning.html">Learning</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="sign-up.html">Sign Up</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="./backend/logout.php">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="learning-container">
+        <div class="learning-info">
+            <img src="./images/img1.avif" alt="Course Image" style="max-width: 100%; height: auto;">
+            <h3>Introduction to Sustainability</h3>
+            <p>Learn the basics of sustainable living and how you can make a positive impact on the environment.</p>
+        </div>
+        <div class="pdf-container">
+            <iframe src="./components/Komaiya Samuel_C7_N3_20230331.pdf#toolbar=0"></iframe>
+        </div>
+        <a href="survey.html" class="survey-button">Take a quick survey</a>
+    </div>
+</body>
+
+</html>
